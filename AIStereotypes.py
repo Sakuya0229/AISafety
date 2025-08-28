@@ -6,7 +6,7 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, GenerationConfig
 
 
-MODEL_NAME = 'TULU-2-DPO-7B'  # @param ['LLaMA-2-7B', 'TULU-2-DPO-7B']
+MODEL_NAME = 'LLaMA-2-7B'  # @param ['LLaMA-2-7B', 'TULU-2-DPO-7B']
 
 if MODEL_NAME == 'LLaMA-2-7B':
     model_path = 'Llama-2-7B-GPTQ'
@@ -94,6 +94,6 @@ plt.bar(keys, cnts)
 plt.title(f'{MODEL_NAME.lower()}')
 for i in range(len(keys)):
     plt.text(i, cnts[i], cnts[i], ha='center')
-plt.savefig(f'{MODEL_NAME.lower()}_q3.png')
+plt.savefig(f'{MODEL_NAME.lower()}.png')
 plt.show()
 plt.close()
